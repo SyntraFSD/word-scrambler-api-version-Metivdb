@@ -22,7 +22,7 @@ function handleRequest(event) {
     const response = JSON.parse(request.responseText);
     if (request.status >= 200 && request.status < 300) {
      alert('Succes');
-      resultContainer.textContent = response;
+      resultContainer.textContent = response.scrambled_text;
     } else {
       alert('Error');
     }
@@ -33,7 +33,5 @@ function handleRequest(event) {
 
 // add click event listener to submitBtn
 submitBtn.addEventListener('click', sendData);
-// # add input event listener to userInput for counts
 
-// ## add input event listener to userInput for realTimeScramble
 
